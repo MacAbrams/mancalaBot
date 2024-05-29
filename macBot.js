@@ -1,4 +1,4 @@
-class Player{
+class MacBot{
   constructor(name){
     this.name = name;
   }
