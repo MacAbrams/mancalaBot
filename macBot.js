@@ -23,7 +23,7 @@ class MacBot{
         let move = 0;
         for(let i=0;i<6;i++){
                 let n = i+wells[i];
-                n=n>5?n-1:n;
+                n=(n>5)?n-1:n;
                 n=n%12;
                 if(well[n]>move){
                         best = i;
