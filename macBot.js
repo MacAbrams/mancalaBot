@@ -29,9 +29,9 @@ class MacBot{
                 }
                 
                 n=n%12;
-                if(well[n]>move){
+                if(wells[n]>move){
                         best = i;
-                        move = well[n]
+                        move = wells[n]
                 }
         }
     
