@@ -19,9 +19,11 @@ class MacBot{
                         Player  ||
   */
   getMove(wells, store1, store2){
+      let depth = 1;
         let best = 0;
         let move = 0;
         for(let i=0;i<6;i++){
+            if(wells[i]%12!=0){
                 let n = i+wells[i];
                 // n=(n>5)?n-1:n;
                 if(n>5){
@@ -33,6 +35,7 @@ class MacBot{
                         best = i;
                         move = wells[n]
                 }
+            }
         }
     
     return best;
