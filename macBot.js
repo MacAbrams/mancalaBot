@@ -38,7 +38,6 @@ class MacBot{
                 }
                 
                 n=n%12;
-                let replay = 
               if(wells[i]==(6-i)){
                   move[i]+=6+i
               }
