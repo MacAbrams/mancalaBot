@@ -41,8 +41,8 @@ class MacBot{
               if(wells[i]==(6-i)){
                   move[i]+=6+i
               }
-                move[i] += wells[n]+6*replay
-            }
+                move[i] += wells[n]
+          }
         }
     let best = 5;
     for(let i=0;i<6;i++){
