@@ -20,7 +20,6 @@ class MacBot{
   */
   getMove(wells, store1, store2){
       let depth = 1;
-    console.log("start")
         for(let i=5;i>=0;i--){
 
           if(wells[i]==(6-i)){
@@ -29,8 +28,7 @@ class MacBot{
           }
         }
     
-        let best = 0;
-        let move = 0;
+        let move = [];
         for(let i=0;i<6;i++){
             if(wells[i]%12!=0){
                 let n = i+wells[i];
@@ -40,13 +38,15 @@ class MacBot{
                 }
                 
                 n=n%12;
-                if(wells[n]>move){
-                        best = i;
-                        move = wells[n]
-                }
+                move[i] = wells[n]
             }
         }
-    
+    let best = 5;
+    for(let i=0;i<6;i++){
+      if(wells[i]>0 && move[i]>move[best]){
+        best = i;
+      }
+    }
     return best;
   }
   
