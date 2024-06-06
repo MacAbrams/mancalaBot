@@ -28,7 +28,7 @@ class MacBot{
         //   }
         // }
     
-        let move = [];
+        let move = [0,0,0,0,0,0];
         for(let i=0;i<6;i++){
             if(wells[i]%12!=0){
                 let n = i+wells[i];
@@ -38,8 +38,11 @@ class MacBot{
                 }
                 
                 n=n%12;
-                let replay = wells[i]==(6-i)
-                move[i] = wells[n]+6*replay+i
+                let replay = 
+              if(wells[i]==(6-i)){
+                  move[i]+=6+i
+              }
+                move[i] += wells[n]+6*replay
             }
         }
     let best = 5;
