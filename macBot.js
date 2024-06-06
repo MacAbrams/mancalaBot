@@ -22,10 +22,8 @@ class MacBot{
       let depth = 1;
     console.log("start")
         for(let i=5;i>=0;i--){
-              console.log(i)
 
-          if(wells[i]==(6-i){
-            console.log("yep")
+          if(wells[i]==(6-i)){
 
             return i;
           }
